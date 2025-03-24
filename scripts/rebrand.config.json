@@ -1,6 +1,6 @@
 {
-  "owner": "react18-tools",
-  "repo": "turborepo-template",
-  "packageName": "react18-loaders",
-  "title": "React 18 Loaders"
+  "packageName": "@m2d/core",
+  "owner": "tiny-md",
+  "repo": "md2docx-plugin-template",
+  "title": "Md2docx Plugin Template"
 }
