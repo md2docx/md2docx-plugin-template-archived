@@ -93,27 +93,20 @@ const rebrandFn = async () => {
   /**
    * feats: Rebrander
    */
-  const { feats } = await prompt({
-    type: "multiselect",
-    name: "feats",
-    message: "Select the features to remove - will help clean up and lighten the build ci/cd",
-    initial: ["Rebrander"],
-    choices: [
-      {
-        name: "Rebrander",
-        message:
-          "After rebranding is done, usually it is not required to run rebranding scripts again unless you change your package and repo names.",
-      },
-    ],
+  const { shouldRemoveRebrandScripts } = await prompt({
+    type: "confirm",
+    name: "shouldRemoveRebrandScripts",
+    message: "Do you want to remove the rebranding scripts?",
+    initial: true,
   });
 
   const rootPackageJSON = require("../package.json");
 
-  if (feats.includes("Rebrander")) {
+  if (shouldRemoveRebrandScripts) {
     delete rootPackageJSON.scripts.rebrand;
     delete rootPackageJSON.devDependencies.enquirer;
-    ["./scripts/rebrand.js", "./scripts/rebrander.js"].forEach(dirOrfile =>
-      execSync("rm -rf " + dirOrfile),
+    ["./scripts/rebrand.js", "./scripts/rebrander.js"].forEach(dirOrFile =>
+      execSync("rm -rf " + dirOrFile),
     );
   }
 
@@ -127,9 +120,9 @@ const rebrandFn = async () => {
     console.error(e);
   }
 
-  if (feats.length)
+  if (shouldRemoveRebrandScripts)
     execSync(
-      'git add . && git commit -m "Cleaned up features 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]"',
+      'git add . && git commit -m "Cleaned up rebrand scripts 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]"',
     );
 
   console.log("\x1b[32m", "90% of rebranding completed!");
