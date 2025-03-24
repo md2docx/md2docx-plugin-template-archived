@@ -1,5 +1,5 @@
 {
-  "name": "@m2d/core",
+  "name": "@m2d/mdast",
   "author": "Mayank Kumar Chaudhari (https://mayank-chaudhari.vercel.app)",
   "private": false,
   "version": "0.0.0",
@@ -64,12 +64,10 @@
     },
     {
       "type": "github",
-      "url": "https://github.com/sponsors/mayank1513"
+      "url": "https://github.com/sponsors/tiny-md"
     }
   ],
   "keywords": [
-    "React",
-    "React Loaders",
     "React 18",
     "React 19",
     "Next.js",

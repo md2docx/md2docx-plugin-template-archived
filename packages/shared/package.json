@@ -48,6 +48,7 @@
     "r18gs": "^3.0.1",
     "react-live": "^4.1.8",
     "react18-loaders": "latest",
-    "@m2d/core": "workspace:*"
+    "@m2d/core": "latest",
+    "@m2d/mdast": "workspace:*"
   }
 }

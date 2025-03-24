@@ -131,11 +131,6 @@ try {
 } catch {
   // empty
 }
-const docsWorkflowPath = path.resolve(workflowsPath, "docs.yml");
-fs.writeFileSync(
-  docsWorkflowPath,
-  fs.readFileSync(docsWorkflowPath, "utf-8").replace(oldOwner, owner).replaceAll(oldRepo, repo),
-);
 
 // Update SECURITY.md
 const secFile = path.resolve(rootDir, "SECURITY.md");
@@ -145,9 +140,6 @@ fs.writeFileSync(
 );
 // clean up
 const { execSync } = require("child_process");
-
-// update typedoc config
-execSync(`sed -i -e 's/name:.*/name: "${title.replace(/\//g, "\\/")}",/' typedoc.config.js`);
 
 // reinstall dependencies --> this will update the pnpm-lock file as well which we need to add to commit
 execSync("pnpm i");

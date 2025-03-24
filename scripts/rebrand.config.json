@@ -1,5 +1,5 @@
 {
-  "packageName": "@m2d/core",
+  "packageName": "@m2d/mdast",
   "owner": "tiny-md",
   "repo": "md2docx-plugin-template",
   "title": "Md2docx Plugin Template"

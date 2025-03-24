@@ -1,10 +1,10 @@
 # Md2docx Plugin Template <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 40px"/>
 
-[![test](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml/badge.svg)](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/tiny-md/md2docx-plugin-template/maintainability) [![codecov](https://codecov.io/gh/tiny-md/md2docx-plugin-template/graph/badge.svg)](https://codecov.io/gh/tiny-md/md2docx-plugin-template) [![Version](https://img.shields.io/npm/v/@m2d/core.svg?colorB=green)](https://www.npmjs.com/package/@m2d/core) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/core.svg)](https://www.npmjs.com/package/@m2d/core) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/core) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
+[![test](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml/badge.svg)](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/tiny-md/md2docx-plugin-template/maintainability) [![codecov](https://codecov.io/gh/tiny-md/md2docx-plugin-template/graph/badge.svg)](https://codecov.io/gh/tiny-md/md2docx-plugin-template) [![Version](https://img.shields.io/npm/v/@m2d/mdast.svg?colorB=green)](https://www.npmjs.com/package/@m2d/mdast) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/mdast.svg)](https://www.npmjs.com/package/@m2d/mdast) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/mdast) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
 
 Md2docx Plugin Template is a comprehensive library designed to unlock the full potential of React 18 server components. It provides customizable loading animation components and a fullscreen loader container, seamlessly integrating with React and Next.js.
 
-✅ Fully Treeshakable (import from `@m2d/core/client/loader-container`)
+✅ Fully Treeshakable (import from `@m2d/mdast/client/loader-container`)
 
 ✅ Fully TypeScript Supported
 
@@ -23,37 +23,37 @@ Md2docx Plugin Template is a comprehensive library designed to unlock the full p
 ### Installation
 
 ```bash
-pnpm add @m2d/core
+pnpm add @m2d/mdast
 ```
 
 **_or_**
 
 ```bash
-npm install @m2d/core
+npm install @m2d/mdast
 ```
 
 **_or_**
 
 ```bash
-yarn add @m2d/core
+yarn add @m2d/mdast
 ```
 
-## Want Lite Version? [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/core-lite)](https://www.npmjs.com/package/@m2d/core-lite) [![Version](https://img.shields.io/npm/v/@m2d/core-lite.svg?colorB=green)](https://www.npmjs.com/package/@m2d/core-lite) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/core-lite.svg)](https://www.npmjs.com/package/@m2d/core-lite)
+## Want Lite Version? [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/mdast-lite)](https://www.npmjs.com/package/@m2d/mdast-lite) [![Version](https://img.shields.io/npm/v/@m2d/mdast-lite.svg?colorB=green)](https://www.npmjs.com/package/@m2d/mdast-lite) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/mdast-lite.svg)](https://www.npmjs.com/package/@m2d/mdast-lite)
 
 ```bash
-pnpm add @m2d/core-lite
-```
-
-**or**
-
-```bash
-npm install @m2d/core-lite
+pnpm add @m2d/mdast-lite
 ```
 
 **or**
 
 ```bash
-yarn add @m2d/core-lite
+npm install @m2d/mdast-lite
+```
+
+**or**
+
+```bash
+yarn add @m2d/mdast-lite
 ```
 
 > You need `r18gs` as a peer-dependency
@@ -64,20 +64,20 @@ You can import styles globally or within specific components.
 
 ```css
 /* globals.css */
-@import "@m2d/core/dist";
+@import "@m2d/mdast/dist";
 ```
 
 ```tsx
 // layout.tsx
-import "@m2d/core/dist/index.css";
+import "@m2d/mdast/dist/index.css";
 ```
 
 For selective imports:
 
 ```css
 /* globals.css */
-@import "@m2d/core/dist/client"; /** required if you are using LoaderContainer */
-@import "@m2d/core/dist/server/bars/bars1";
+@import "@m2d/mdast/dist/client"; /** required if you are using LoaderContainer */
+@import "@m2d/mdast/dist/server/bars/bars1";
 ```
 
 ### Usage
@@ -85,7 +85,7 @@ For selective imports:
 Using loaders is straightforward.
 
 ```tsx
-import { Bars1 } from "@m2d/core/dist/server/bars/bars1";
+import { Bars1 } from "@m2d/mdast/dist/server/bars/bars1";
 
 export default function MyComponent() {
   return someCondition ? <Bars1 /> : <>Something else...</>;
@@ -106,7 +106,7 @@ For detailed API and options, refer to [the API documentation](https://tiny-md.g
 
 ```tsx
 // some other page or component
-import { useLoader } from "@m2d/core/dist/hooks";
+import { useLoader } from "@m2d/mdast/dist/hooks";
 
 export default MyComponent() {
 	const { setLoading } = useLoader();
