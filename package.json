@@ -1,5 +1,5 @@
 {
-  "name": "turborepo-template",
+  "name": "md2docx-plugin-template",
   "private": true,
   "scripts": {
     "build": "turbo build",

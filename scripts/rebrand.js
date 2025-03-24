@@ -147,7 +147,7 @@ const rebrandFn = async () => {
   console.log("\x1b[36m", ".");
   console.log(
     "\x1b[33m",
-    "If you have any issues, please raise an issue at https://github.com/react18-tools/turborepo-template/issues",
+    "If you have any issues, please raise an issue at https://github.com/tiny-md/md2docx-plugin-template/issues",
   );
 };
 
