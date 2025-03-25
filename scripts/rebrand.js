@@ -8,7 +8,6 @@ const config = require("./rebrand.config.json");
 
 const [owner, repo] = execSync(
   'git remote get-url --push origin | sed "s/https:\\/\\/github.com\\///" | sed "s/.git//"',
-  { stdio: "inherit" },
 )
   .toString()
   .trim()
