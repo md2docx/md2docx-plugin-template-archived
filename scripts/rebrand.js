@@ -110,9 +110,12 @@ const rebrandFn = async () => {
       execSync("rm -rf " + dirOrFile, { stdio: "inherit" }),
     );
   } else
-    execSync(`sed -i -e 's/rm -rf \\.\\/lib\\/src\\/ && //' scripts/rebrander.js`, {
-      stdio: "inherit",
-    });
+    execSync(
+      `sed -i -e 's/rm -rf \\.\\/lib\\/src\\/ \&\& mv lib\\/src_template lib\\/src \&\& //' scripts/rebrander.js`,
+      {
+        stdio: "inherit",
+      },
+    );
 
   const rootDir = process.cwd();
   try {
