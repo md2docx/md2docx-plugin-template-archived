@@ -4,6 +4,8 @@ const path = require("node:path");
 const { prompt } = require("enquirer");
 const { execSync } = require("child_process");
 
+const config = require("./rebrand.config.json");
+
 const [owner, repo] = execSync(
   'git remote get-url --push origin | sed "s/https:\\/\\/github.com\\///" | sed "s/.git//"',
   { stdio: "inherit" },
@@ -122,6 +124,11 @@ const rebrandFn = async () => {
   } catch (e) {
     console.error(e);
   }
+
+  execSync(
+    `sed -i -e 's/const packageName = repo/const packageName = config.packageName/' scripts/rebrand.js`,
+    { stdio: "inherit" },
+  );
 
   execSync(
     'git add . && git commit -m "Cleaned up rebrand scripts 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]"',
