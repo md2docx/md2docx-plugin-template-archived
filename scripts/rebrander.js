@@ -144,7 +144,7 @@ const { execSync } = require("child_process");
 // reinstall dependencies --> this will update the pnpm-lock file as well which we need to add to commit
 execSync("pnpm i");
 
-// clean lib/src and craete commit
+// clean lib/src and create commit
 execSync(
-  'rm -rf ./lib/src/ && git add . && git commit -m "Rebrand 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]" && turbo telemetry disable',
+  'rm -rf ./lib/src/ && touch ./lib/src/index.ts && git add . && git commit -m "Rebrand 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]" && turbo telemetry disable',
 );
