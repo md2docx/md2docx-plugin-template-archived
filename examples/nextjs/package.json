@@ -21,7 +21,7 @@
     "react18-loaders": "latest",
     "webgl-generative-particles": "^0.0.1",
     "@m2d/core": "latest",
-    "@m2d/mdast": "workspace:*"
+    "@m2d/emoji": "workspace:*"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.2.3",

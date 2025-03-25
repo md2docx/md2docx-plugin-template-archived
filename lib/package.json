@@ -1,5 +1,5 @@
 {
-  "name": "@m2d/mdast",
+  "name": "@m2d/emoji",
   "author": "Mayank Kumar Chaudhari (https://mayank-chaudhari.vercel.app)",
   "private": false,
   "version": "0.0.0",
@@ -54,8 +54,6 @@
     }
   ],
   "keywords": [
-    "Next.js 15",
-    "React server components",
     "Customizable",
     "Cutting-edge",
     "Compatibility",

@@ -26,8 +26,9 @@ const rebrandFn = async () => {
 
   if (!shouldRebrand) return;
 
+  const rootDir = process.cwd();
   // if .tkb is not moved - setup workflow was not triggered or could not create the required commit
-  if (fs.existsSync(path.resolve(process.cwd(), "scripts", ".tkb"))) {
+  if (fs.existsSync(path.resolve(rootDir, "scripts", ".tkb"))) {
     `rm .tkb
           mv ./scripts/.tkb ./.tkb`
       .split("\n")
@@ -110,14 +111,13 @@ const rebrandFn = async () => {
       execSync("rm -rf " + dirOrFile, { stdio: "inherit" }),
     );
   } else
-    execSync(
-      `sed -i -e 's/rm -rf \\.\\/lib\\/src\\/ \&\& mv lib\\/src_template lib\\/src \&\& //' scripts/rebrander.js`,
-      {
-        stdio: "inherit",
-      },
+    fs.writeFileSync(
+      path.resolve(rootDir, "scripts", "rebrander.js"),
+      fs
+        .readFileSync(path.resolve(rootDir, "scripts", "rebrander.js"), "utf-8")
+        .replace("rm -rf ./lib/src/ && mv lib/src_template lib/src && ", ""),
     );
 
-  const rootDir = process.cwd();
   try {
     fs.writeFileSync(
       path.resolve(rootDir, "package.json"),
