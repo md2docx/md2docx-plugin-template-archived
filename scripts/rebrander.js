@@ -10,10 +10,10 @@ const [oldOwner, oldRepo] = packageJSON.repository.split(":")[1].split("/");
 // update canonicals
 const canonicalPath = path.resolve(rootDir, "scripts", "publish-canonical.js");
 const canonicalContent = fs.readFileSync(canonicalPath, "utf-8");
-if (answers.packageName.startsWith("@m2d/") && oldPkgName.split("/")[1]) {
+if (packageName.startsWith("@m2d/") && oldPkgName.split("/")[1]) {
   fs.writeFileSync(
     canonicalPath,
-    canonicalContent.replace(oldPkgName.split("/")[1], answers.packageName.split("/")[1]),
+    canonicalContent.replace(oldPkgName.split("/")[1], packageName.split("/")[1]),
   );
 } else {
   fs.writeFileSync(canonicalPath, canonicalContent.replace(/\[.*?\]/, "[]"));
