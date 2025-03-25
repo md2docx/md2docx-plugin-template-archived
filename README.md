@@ -1,129 +1,81 @@
-# Md2docx Plugin Template <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 40px"/>
+## 🧩 Plugin Template for `mdast2docx` & `@m2d/remark-docx` <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 40px"/>
 
 [![test](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml/badge.svg)](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/tiny-md/md2docx-plugin-template/maintainability) [![codecov](https://codecov.io/gh/tiny-md/md2docx-plugin-template/graph/badge.svg)](https://codecov.io/gh/tiny-md/md2docx-plugin-template) [![Version](https://img.shields.io/npm/v/@m2d/emoji.svg?colorB=green)](https://www.npmjs.com/package/@m2d/emoji) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/emoji.svg)](https://www.npmjs.com/package/@m2d/emoji) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/emoji)
 
-Md2docx Plugin Template is a comprehensive library designed to unlock the full potential of React 18 server components. It provides customizable loading animation components and a fullscreen loader container, seamlessly integrating with React and Next.js.
+> This repository serves as a starting point for building plugins that extend the functionality of [`mdast2docx`](https://www.npmjs.com/package/mdast2docx), [`@m2d/core`](https://www.npmjs.com/package/@m2d/core) and [`@m2d/remark-docx`](https://www.npmjs.com/package/@m2d/remark-docx).
 
-✅ Fully Treeshakable (import from `Md2docx Plugin Template/client/loader-container`)
+<details>
+<summary style="cursor:pointer"><h2 style="display:inline-block">Features</h2></summary>
 
-✅ Fully TypeScript Supported
+This template offers the following pre-configured features. Additionally, your repository will automatically be re-branded with the help of workflows and post-install scripts.
 
-✅ Leverages the power of React 18 Server components
+✅ Monorepo powered by Turborepo and GitHub actions for automating building, testing, and deploying your plugin library
 
-✅ Compatible with all React 18 build systems/tools/frameworks
+✅ Examples with Next.js, and Vite to showcase how your library can be utilized, also helps in quick manual testing
 
-✅ Documented with [Typedoc](https://tiny-md.github.io/md2docx-plugin-template) ([Docs](https://tiny-md.github.io/md2docx-plugin-template))
+✅ Examples pre-configured for Light/Dark theme based on user preference
 
-✅ Examples for Next.js, and Vite
+✅ Examples ready to be deployed to Vercel
+
+✅ Code of Conduct and contributing files, ready for customization
+
+✅ Prettier and linter configured according to modern best practices (Feel free to add your flavor)
+
+✅ Recommended VSCode extensions - Prettier and [Kanban board](https://github.com/mayank1513/vscode-extension-trello-kanban-board) for code formatting and project management directly within your IDE
+
+✅ Test setup with Vitest - A modern and fast testing framework supporting Jest-like APIs
+
+✅ Workflows to automate testing on every pull-request or code push event
+
+✅ Workflow to automatically publish and create GitHub releases when you update your library's `package.json` file.
+
+✅ Workflow to automatically rebrand the entire template based on your repository name. (Refer [TODO.md](./TODO.md))
+
+✅ Plus, this repo includes a quick checklist for configuring Codecov and other badges, setting up your docs website on GitHub pages, and more. See [Checklist](./TODO.md) or open TKB(Workspace) if you have installed the Trello-Kanban-Board extension.
+
+</details>
 
 > <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Star [this repository](https://github.com/tiny-md/md2docx-plugin-template) and share it with your friends.
 
-## Getting Started
+---
 
-### Installation
+## Getting Started:
 
-```bash
-pnpm add Md2docx Plugin Template
-```
+This template is based on [Turborepo Template](https://github.com/react18-tools/turborepo-template/). But this one is optimized for md2docx plugins. It includes pre-configured unit-tests (in most cases, you don't event need to update any of the unit tests), a lot of extra stuff provided by the turborepo-template is removed, and comes with dependencies and scripts optimized for md2docx plugin development.
 
-**_or_**
+To get started, simply click on the `"Use this template"` button to create a new repository based on this template, \*\*update [`sripts/rebrand.config.json`](./scripts/rebrand.config.json) if required, and install dependencies(Will automatically trigger rebrand.js). Customize it according to your requirements for your next JavaScript/TypeScript/React/Next.js library or project.
 
-```bash
-npm install Md2docx Plugin Template
-```
+For detailed instructions and a checklist, please refer to [TODO.md](./TODO.md).
 
-**_or_**
+### 🤩 Don't forget to star [this repository](https://github.com/react18-tools/turborepo-template)!
 
-```bash
-yarn add Md2docx Plugin Template
-```
+Looking for a hands-on course to get started with Turborepo? Check out [React and Next.js with TypeScript](https://mayank-chaudhari.vercel.app/courses/react-and-next-js-with-typescript) and [The Game of Chess with Next.js, React, and TypeScript](https://www.udemy.com/course/game-of-chess-with-nextjs-react-and-typescript/?referralCode=851A28F10B254A8523FE)
 
-## Want Lite Version? [![npm bundle size](https://img.shields.io/bundlephobia/minzip/Md2docx Plugin Template-lite)](https://www.npmjs.com/package/Md2docx Plugin Template-lite) [![Version](https://img.shields.io/npm/v/Md2docx Plugin Template-lite.svg?colorB=green)](https://www.npmjs.com/package/Md2docx Plugin Template-lite) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/Md2docx Plugin Template-lite.svg)](https://www.npmjs.com/package/Md2docx Plugin Template-lite)
+---
 
-```bash
-pnpm add Md2docx Plugin Template-lite
-```
+### 🧰 Helpful References
 
-**or**
+- [`@m2d/core`](https://www.npmjs.com/package/@m2d/core) – Core MDAST to DOCX engine
+- [`@m2d/remark-docx`](https://www.npmjs.com/package/@m2d/remark-docx) – Remark plugin
+- [Unified Ecosystem](https://unifiedjs.com) – AST-based processors for markdown, html, etc.
+- [MDAST Spec](https://github.com/syntax-tree/mdast) – Markdown Abstract Syntax Tree
 
-```bash
-npm install Md2docx Plugin Template-lite
-```
+---
 
-**or**
+### 💡 Derive Ideas from existing Plugins
 
-```bash
-yarn add Md2docx Plugin Template-lite
-```
+- `@m2d/math`: Parse math blocks and convert to equation DOCX
+- `@m2d/image`: Convert Markdown/HTML images to inline DOCX images
+- `@m2d/html`: Parse raw HTML into extended MDAST with styles
+- `@m2d/table`: Advanced table support with merged cells, widths, styles
 
-> You need `r18gs` as a peer-dependency
+---
 
-### Import Styles
+### 🙌 Contribute
 
-You can import styles globally or within specific components.
+If you’re building a plugin you'd like to share, let us know or open a PR in the [mdast2docx plugins repo](https://github.com/m2djs/mdast2docx)!
 
-```css
-/* globals.css */
-@import "Md2docx Plugin Template/dist";
-```
-
-```tsx
-// layout.tsx
-import "Md2docx Plugin Template/dist/index.css";
-```
-
-For selective imports:
-
-```css
-/* globals.css */
-@import "Md2docx Plugin Template/dist/client"; /** required if you are using LoaderContainer */
-@import "Md2docx Plugin Template/dist/server/bars/bars1";
-```
-
-### Usage
-
-Using loaders is straightforward.
-
-```tsx
-import { Bars1 } from "Md2docx Plugin Template/dist/server/bars/bars1";
-
-export default function MyComponent() {
-  return someCondition ? <Bars1 /> : <>Something else...</>;
-}
-```
-
-For detailed API and options, refer to [the API documentation](https://tiny-md.github.io/md2docx-plugin-template).
-
-**Using LoaderContainer**
-
-`LoaderContainer` is a fullscreen component. You can add this component directly in your layout and then use `useLoader` hook to toggle its visibility.
-
-```tsx
-// layout.tsx
-<LoaderContainer />
-	 ...
-```
-
-```tsx
-// some other page or component
-import { useLoader } from "Md2docx Plugin Template/dist/hooks";
-
-export default MyComponent() {
-	const { setLoading } = useLoader();
-	useCallback(()=>{
-		setLoading(true);
-		...do some work
-		setLoading(false);
-	}, [])
-	...
-}
-```
-
-## License
-
-This library is licensed under the MPL-2.0 open-source license.
-
-> <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Please enroll in [our courses](https://mayank-chaudhari.vercel.app/courses) or [sponsor](https://github.com/sponsors/mayank1513) our work.
+> <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Enrolling in [our courses](https://mayank-chaudhari.vercel.app/courses) or [sponsor](https://github.com/sponsors/mayank1513) our work.
 
 <hr />
 

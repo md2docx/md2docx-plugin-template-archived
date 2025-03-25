@@ -3,7 +3,7 @@
   "author": "Mayank Kumar Chaudhari (https://mayank-chaudhari.vercel.app)",
   "private": false,
   "version": "0.0.0",
-  "description": "",
+  "description": "A plugin for @m2d/core that parses emoji shortcodes like :smile: and replaces them with their corresponding Unicode emoji characters for DOCX output.",
   "license": "MPL-2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -15,6 +15,13 @@
   "files": [
     "dist/**"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsup && tsc -p tsconfig-build.json && gzip -c dist/index.js | wc -c",
     "clean": "rm -rf dist",
@@ -42,7 +49,7 @@
     "vitest": "^3.0.9"
   },
   "dependencies": {
-    "@m2d/core": "^0.0.2"
+    "@m2d/core": "^0.0.3"
   },
   "peerDependencies": {
     "docx": "^9.3.0"
@@ -58,14 +65,45 @@
     }
   ],
   "keywords": [
-    "Customizable",
-    "Cutting-edge",
-    "Compatibility",
-    "Frontend development",
-    "UI components",
-    "Web development",
-    "Progressive",
-    "Modern",
-    "Seamless integration"
+    "emoji",
+    "emoji-plugin",
+    "emoji-support",
+    "shortcode",
+    "unicode",
+    "text-processing",
+    "markdown-to-docx",
+    "mdast-to-docx",
+    "markdown",
+    "mdast",
+    "md2docx",
+    "mdast2docx",
+    "plugin",
+    "converter",
+    "docx",
+    "ms-word",
+    "export",
+    "document-generator",
+    "document-generation",
+    "remark",
+    "unified",
+    "images",
+    "hyperlinks",
+    "footnotes",
+    "typescript",
+    "open-source",
+    "customizable",
+    "modern",
+    "seamless-integration",
+    "cutting-edge",
+    "compatibility",
+    "progressive",
+    "web-development",
+    "frontend",
+    "automation",
+    "google-sheets",
+    "generative-ai",
+    "rich-text",
+    "m2d",
+    "mayank1513"
   ]
 }

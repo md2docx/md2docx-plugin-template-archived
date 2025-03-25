@@ -13,7 +13,7 @@ const canonicalContent = fs.readFileSync(canonicalPath, "utf-8");
 if (packageName.startsWith("@m2d/") && oldPkgName.split("/")[1]) {
   fs.writeFileSync(
     canonicalPath,
-    canonicalContent.replace(oldPkgName.split("/")[1], packageName.split("/")[1]),
+    canonicalContent.replaceAll(oldPkgName.split("/")[1], packageName.split("/")[1]),
   );
 } else {
   fs.writeFileSync(canonicalPath, canonicalContent.replace(/\[.*?\]/, "[]"));
@@ -31,7 +31,7 @@ packageJSON.funding.unshift({
   type: "github",
   url: `https://github.com/sponsors/${owner}`,
 });
-packageJSON.keywords = packageJSON.keywords.slice(2);
+packageJSON.keywords = packageJSON.keywords.slice(5);
 
 fs.writeFileSync(
   path.resolve(rootDir, "lib", "package.json"),

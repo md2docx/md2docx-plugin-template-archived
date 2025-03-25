@@ -1,132 +1,81 @@
-# Md2docx Plugin Template <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 40px"/>
+# @m2d/emoji
 
-[![test](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml/badge.svg)](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/tiny-md/md2docx-plugin-template/maintainability) [![codecov](https://codecov.io/gh/tiny-md/md2docx-plugin-template/graph/badge.svg)](https://codecov.io/gh/tiny-md/md2docx-plugin-template) [![Version](https://img.shields.io/npm/v/Md2docx Plugin Template.svg?colorB=green)](https://www.npmjs.com/package/Md2docx Plugin Template) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/Md2docx Plugin Template.svg)](https://www.npmjs.com/package/Md2docx Plugin Template) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/Md2docx Plugin Template) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
+[![test](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml/badge.svg)](https://github.com/tiny-md/md2docx-plugin-template/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/tiny-md/md2docx-plugin-template/maintainability) [![codecov](https://codecov.io/gh/tiny-md/md2docx-plugin-template/graph/badge.svg)](https://codecov.io/gh/tiny-md/md2docx-plugin-template) [![Version](https://img.shields.io/npm/v/@m2d/emoji.svg?colorB=green)](https://www.npmjs.com/package/@m2d/emoji) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/emoji.svg)](https://www.npmjs.com/package/@m2d/emoji) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/emoji)
 
-Md2docx Plugin Template is a comprehensive library designed to unlock the full potential of React 18 server components. It provides customizable loading animation components and a fullscreen loader container, seamlessly integrating with React and Next.js.
+> Emoji shortcode support for `mdast2docx`
 
-✅ Fully Treeshakable (import from `Md2docx Plugin Template/client/loader-container`)
+This plugin adds support for emoji shortcodes (e.g., `:smile:`, `:rocket:`) in your Markdown-to-DOCX conversion pipeline. It replaces recognized emoji shortcodes with their corresponding Unicode characters during the MDAST transformation.
 
-✅ Fully TypeScript Supported
+---
 
-✅ Leverages the power of React 18 Server components
+## ✨ Features
 
-✅ Compatible with all React 18 build systems/tools/frameworks
+- Converts emoji shortcodes to Unicode emojis (e.g., `:tada:` → 🎉)
+- Compatible with [`@m2d/core`](https://www.npmjs.com/package/@m2d/core)
+- Works seamlessly within the `mdast2docx` plugin ecosystem
+- Easy to integrate and lightweight
 
-✅ Documented with [Typedoc](https://tiny-md.github.io/md2docx-plugin-template) ([Docs](https://tiny-md.github.io/md2docx-plugin-template))
+---
 
-✅ Examples for Next.js, and Vite
-
-> <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Star [this repository](https://github.com/tiny-md/md2docx-plugin-template) and share it with your friends.
-
-## Getting Started
-
-### Installation
+## 📦 Installation
 
 ```bash
-pnpm add Md2docx Plugin Template
+pnpm install @m2d/emoji
 ```
 
 **_or_**
 
 ```bash
-npm install Md2docx Plugin Template
+yarn add @m2d/emoji
 ```
 
 **_or_**
 
 ```bash
-yarn add Md2docx Plugin Template
+npm add @m2d/emoji
 ```
 
-## Want Lite Version? [![npm bundle size](https://img.shields.io/bundlephobia/minzip/Md2docx Plugin Template-lite)](https://www.npmjs.com/package/Md2docx Plugin Template-lite) [![Version](https://img.shields.io/npm/v/Md2docx Plugin Template-lite.svg?colorB=green)](https://www.npmjs.com/package/Md2docx Plugin Template-lite) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/Md2docx Plugin Template-lite.svg)](https://www.npmjs.com/package/Md2docx Plugin Template-lite)
+---
+
+## 🧠 How It Works
+
+This plugin scans all text nodes for emoji shortcodes (e.g., `:fire:`, `:sparkles:`) and replaces them with matching Unicode emojis using a predefined emoji JSON mapping.
+
+---
+
+## 🔍 Emoji Support
+
+It uses the [GitHub-style emoji shortcodes](https://github.com/ikatyang/emoji-cheat-sheet) and more — if a shortcode is not recognized, it will remain unchanged.
+
+---
+
+## 🛠️ Development
 
 ```bash
-pnpm add Md2docx Plugin Template-lite
+# Clone and install dependencies
+git clone https://github.com/md2docx/emoji-plugin
+cd emoji-plugin
+npm install
+
+# Build / Test / Dev
+npm run build
 ```
 
-**or**
+---
 
-```bash
-npm install Md2docx Plugin Template-lite
-```
+## 📄 License
 
-**or**
+Licensed under the **MPL-2.0** License.
 
-```bash
-yarn add Md2docx Plugin Template-lite
-```
+---
 
-> You need `r18gs` as a peer-dependency
+## ⭐ Support Us
 
-### Import Styles
+If you find this useful:
 
-You can import styles globally or within specific components.
+- ⭐ Star [mdast2docx](https://github.com/tiny-md/mdast2docx) on GitHub
+- ❤️ Consider [sponsoring](https://github.com/sponsors/mayank1513)
 
-```css
-/* globals.css */
-@import "Md2docx Plugin Template/dist";
-```
+---
 
-```tsx
-// layout.tsx
-import "Md2docx Plugin Template/dist/index.css";
-```
-
-For selective imports:
-
-```css
-/* globals.css */
-@import "Md2docx Plugin Template/dist/client"; /** required if you are using LoaderContainer */
-@import "Md2docx Plugin Template/dist/server/bars/bars1";
-```
-
-### Usage
-
-Using loaders is straightforward.
-
-```tsx
-import { Bars1 } from "Md2docx Plugin Template/dist/server/bars/bars1";
-
-export default function MyComponent() {
-  return someCondition ? <Bars1 /> : <>Something else...</>;
-}
-```
-
-For detailed API and options, refer to [the API documentation](https://tiny-md.github.io/md2docx-plugin-template).
-
-**Using LoaderContainer**
-
-`LoaderContainer` is a fullscreen component. You can add this component directly in your layout and then use `useLoader` hook to toggle its visibility.
-
-```tsx
-// layout.tsx
-<LoaderContainer />
-	 ...
-```
-
-```tsx
-// some other page or component
-import { useLoader } from "Md2docx Plugin Template/dist/hooks";
-
-export default MyComponent() {
-	const { setLoading } = useLoader();
-	useCallback(()=>{
-		setLoading(true);
-		...do some work
-		setLoading(false);
-	}, [])
-	...
-}
-```
-
-## License
-
-This library is licensed under the MPL-2.0 open-source license.
-
-
-
-> <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 20px"/> Please enroll in [our courses](https://mayank-chaudhari.vercel.app/courses) or [sponsor](https://github.com/sponsors/mayank1513) our work.
-
-<hr />
-
-<p align="center" style="text-align:center">with 💖 by <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a></p>
+<p align="center">Made with 💖 by <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a></p>
