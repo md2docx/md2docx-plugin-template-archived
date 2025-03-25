@@ -110,13 +110,19 @@ const rebrandFn = async () => {
     ["./scripts/rebrand.js", "./scripts/rebrander.js"].forEach(dirOrFile =>
       execSync("rm -rf " + dirOrFile, { stdio: "inherit" }),
     );
-  } else
+  } else {
     fs.writeFileSync(
       path.resolve(rootDir, "scripts", "rebrander.js"),
       fs
         .readFileSync(path.resolve(rootDir, "scripts", "rebrander.js"), "utf-8")
         .replace("rm -rf ./lib/src/ && mv lib/src_template lib/src && ", ""),
     );
+
+    execSync(
+      `sed -i -e 's/const packageName = repo/const packageName = config.packageName/' scripts/rebrand.js`,
+      { stdio: "inherit" },
+    );
+  }
 
   try {
     fs.writeFileSync(
@@ -126,11 +132,6 @@ const rebrandFn = async () => {
   } catch (e) {
     console.error(e);
   }
-
-  execSync(
-    `sed -i -e 's/const packageName = repo/const packageName = config.packageName/' scripts/rebrand.js`,
-    { stdio: "inherit" },
-  );
 
   execSync(
     'git add . && git commit -m "Cleaned up rebrand scripts 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]"',
