@@ -1,3 +1,6 @@
+> Archiving this repo. Not sure why but even after toggling setting multiple times, actions except CodeQL are not triggered on this repo. Creating another repo from the turborepo-template.
+
+
 ## 🧩 Plugin Template for `mdast2docx` & `@m2d/remark-docx` <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" style="height: 40px"/>
 
 [![test](https://github.com/md2docx/md2docx-plugin-template/actions/workflows/test.yml/badge.svg)](https://github.com/md2docx/md2docx-plugin-template/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/md2docx/md2docx-plugin-template/maintainability) [![codecov](https://codecov.io/gh/md2docx/md2docx-plugin-template/graph/badge.svg)](https://codecov.io/gh/md2docx/md2docx-plugin-template) [![Version](https://img.shields.io/npm/v/@m2d/emoji.svg?colorB=green)](https://www.npmjs.com/package/@m2d/emoji) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/emoji.svg)](https://www.npmjs.com/package/@m2d/emoji) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/emoji)
