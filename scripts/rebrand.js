@@ -160,7 +160,7 @@ const rebrandFn = async () => {
   console.log("\x1b[36m", ".");
   console.log(
     "\x1b[33m",
-    "If you have any issues, please raise an issue at https://github.com/tiny-md/md2docx-plugin-template/issues",
+    "If you have any issues, please raise an issue at https://github.com/md2docx/md2docx-plugin-template/issues",
   );
 };
 

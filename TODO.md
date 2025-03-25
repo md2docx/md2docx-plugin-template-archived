@@ -1,6 +1,6 @@
 ## Step-by-Step Instructions and Checklist
 
-- [ ] Star [this repository](https://github.com/tiny-md/md2docx-plugin-template/) for easy access and to show your support
+- [ ] Star [this repository](https://github.com/md2docx/md2docx-plugin-template/) for easy access and to show your support
 - [x] Create a new GitHub repository using this template.
   - Click the `Use this template` button at the top right -> `Create a new repository`
   - Click `Create repository` and wait for the setup workflow to finish rebranding your repo.
@@ -31,8 +31,8 @@
 - [ ] (Optional) Set up [Deepsource](https://app.deepsource.com/login) for static code analysis
 - [ ] Push your changes/Create PR and see your library being automatically tested and published
 - [ ] Optionally deploy your examples to Vercel.
-- [ ] Feel free to star this template, contribute, and/or sponsor the [`terborepo-template`](https://github.com/tiny-md/md2docx-plugin-template) project or my [other open-source work](https://github.com/sponsors/mayank1513)
-- [ ] You can also fork the [`terborepo-template`](https://github.com/tiny-md/md2docx-plugin-template/fork) and add your package to `scripts/featured.json`
+- [ ] Feel free to star this template, contribute, and/or sponsor the [`terborepo-template`](https://github.com/md2docx/md2docx-plugin-template) project or my [other open-source work](https://github.com/sponsors/mayank1513)
+- [ ] You can also fork the [`terborepo-template`](https://github.com/md2docx/md2docx-plugin-template/fork) and add your package to `scripts/featured.json`
   - If approved, your package will be automatically added to FEATURED.md and also published on the home page of this repo.
 
 ## Recommended Repository Settings
