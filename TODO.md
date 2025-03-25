@@ -12,10 +12,10 @@
 - [ ] Install dependencies using `pnpm`
   - Run `pnpm i` to install dependencies
 - [ ] Make sure you run `pnpm rebrand` from the root directory to rebrand your repo.
-- [ ] 🌟 Enable [private vulnerability reporting](https://github.com/tiny-md/md2docx-plugin-template/security)(https://github.com/tiny-md/md2docx-plugin-template/security)(https://github.com/tiny-md/md2docx-plugin-template/security)
+- [ ] 🌟 Enable [private vulnerability reporting]
 - [ ] Set up `CodeCov`
   - Visit Codecov and set up your repo
-  - Create [repository secret](<(https://github.com/tiny-md/md2docx-plugin-template/settings/secrets/actions)>)((https://github.com/tiny-md/md2docx-plugin-template/settings/secrets/actions))((https://github.com/tiny-md/md2docx-plugin-template/settings/secrets/actions)) for `CODECOV_TOKEN`
+  - Create [repository secret] for `CODECOV_TOKEN`
 - [ ] Set up `CodeClimate`
   - Visit CodeClimate and set up your repo
   - Create [repository secret] for `CC_TEST_REPORTER_ID`
@@ -28,8 +28,6 @@
 - [ ] (Optional) Add Repo Stats by visiting and setting up [repobeats](https://repobeats.axiom.co/)
 - [ ] Create your library and update examples
 - [ ] Update README as required
-- [ ] Set up GitHub pages to deploy docs
-  - Go to [repo settings](https://github.com/tiny-md/md2docx-plugin-template/settings/pages)(https://github.com/tiny-md/md2docx-plugin-template/settings/pages)(https://github.com/tiny-md/md2docx-plugin-template/settings/pages) -> pages (On the left panel); Select deploy from a branch; Then Select `main` and `/docs`
 - [ ] (Optional) Set up [Deepsource](https://app.deepsource.com/login) for static code analysis
 - [ ] Push your changes/Create PR and see your library being automatically tested and published
 - [ ] Optionally deploy your examples to Vercel.

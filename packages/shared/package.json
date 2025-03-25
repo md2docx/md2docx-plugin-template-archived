@@ -49,6 +49,6 @@
     "react-live": "^4.1.8",
     "react18-loaders": "latest",
     "@m2d/core": "latest",
-    "@m2d/emoji": "workspace:*"
+    "@m2d/mdast": "workspace:*"
   }
 }

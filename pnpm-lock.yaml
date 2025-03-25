@@ -36,7 +36,7 @@ importers:
       '@m2d/core':
         specifier: latest
         version: 0.0.2(docx@9.3.0)
-      '@m2d/emoji':
+      '@m2d/mdast':
         specifier: workspace:*
         version: link:../../lib
       '@repo/shared':
@@ -91,7 +91,7 @@ importers:
       '@m2d/core':
         specifier: latest
         version: 0.0.2(docx@9.3.0)
-      '@m2d/emoji':
+      '@m2d/mdast':
         specifier: workspace:*
         version: link:../../lib
       '@repo/shared':
@@ -233,7 +233,7 @@ importers:
       '@m2d/core':
         specifier: latest
         version: 0.0.2(docx@9.3.0)
-      '@m2d/emoji':
+      '@m2d/mdast':
         specifier: workspace:*
         version: link:../../lib
       '@mayank1513/fork-me':
