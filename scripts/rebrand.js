@@ -6,6 +6,7 @@ const { execSync } = require("child_process");
 
 const [owner, repo] = execSync(
   'git remote get-url --push origin | sed "s/https:\\/\\/github.com\\///" | sed "s/.git//"',
+  { stdio: "inherit" },
 )
   .toString()
   .trim()
@@ -27,10 +28,9 @@ const rebrandFn = async () => {
   // if .tkb is not moved - setup workflow was not triggered or could not create the required commit
   if (fs.existsSync(path.resolve(process.cwd(), "scripts", ".tkb"))) {
     `rm .tkb
-          mv ./scripts/.tkb ./.tkb
-          rm -rf ./docs`
+          mv ./scripts/.tkb ./.tkb`
       .split("\n")
-      .forEach(cmd => execSync(cmd.trim()));
+      .forEach(cmd => execSync(cmd.trim(), { stdio: "inherit" }));
   }
 
   const { installExt, ...answers } = await prompt([
@@ -72,8 +72,8 @@ const rebrandFn = async () => {
 
   if (installExt) {
     console.log("\x1b[32m", "Installing recommended VS Code extensions...");
-    execSync("code --install-extension mayank1513.trello-kanban-task-board");
-    execSync("code --install-extension esbenp.prettier-vscode");
+    execSync("code --install-extension mayank1513.trello-kanban-task-board", { stdio: "inherit" });
+    execSync("code --install-extension esbenp.prettier-vscode", { stdio: "inherit" });
   }
 
   console.log("\x1b[32m", "Creating rebrand.config.json...");
@@ -106,9 +106,12 @@ const rebrandFn = async () => {
     delete rootPackageJSON.scripts.rebrand;
     delete rootPackageJSON.devDependencies.enquirer;
     ["./scripts/rebrand.js", "./scripts/rebrander.js"].forEach(dirOrFile =>
-      execSync("rm -rf " + dirOrFile),
+      execSync("rm -rf " + dirOrFile, { stdio: "inherit" }),
     );
-  } else execSync(`sed -i -e 's/rm -rf \.\/lib\/src\/ && //' scripts/rebrander.js`);
+  } else
+    execSync(`sed -i -e 's/rm -rf \.\/lib\/src\/ && //' scripts/rebrander.js`, {
+      stdio: "inherit",
+    });
 
   const rootDir = process.cwd();
   try {
@@ -122,6 +125,7 @@ const rebrandFn = async () => {
 
   execSync(
     'git add . && git commit -m "Cleaned up rebrand scripts 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]"',
+    { stdio: "inherit" },
   );
 
   console.log("\x1b[32m", "90% of rebranding completed!");
