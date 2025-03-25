@@ -83,7 +83,7 @@ const rebrandFn = async () => {
   );
 
   console.log("\x1b[32m", "rebranding...");
-  execSync("node ./scripts/rebrander.js");
+  execSync("node ./scripts/rebrander.js", { stdio: "inherit" });
 
   console.log("\x1b[32m", "...");
   console.log("\x1b[32m", "...");
@@ -108,7 +108,7 @@ const rebrandFn = async () => {
     ["./scripts/rebrand.js", "./scripts/rebrander.js"].forEach(dirOrFile =>
       execSync("rm -rf " + dirOrFile),
     );
-  }
+  } else execSync(`sed -i -e 's/rm -rf \.\/lib\/src\/ && //' scripts/rebrander.js`);
 
   const rootDir = process.cwd();
   try {
@@ -120,10 +120,9 @@ const rebrandFn = async () => {
     console.error(e);
   }
 
-  if (shouldRemoveRebrandScripts)
-    execSync(
-      'git add . && git commit -m "Cleaned up rebrand scripts 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]"',
-    );
+  execSync(
+    'git add . && git commit -m "Cleaned up rebrand scripts 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]"',
+  );
 
   console.log("\x1b[32m", "90% of rebranding completed!");
   console.log("\x1b[36m%s", ".");

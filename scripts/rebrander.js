@@ -144,5 +144,5 @@ console.log(execSync("pnpm i").toString());
 console.log("\x1b[32m", "cleaning up the lib/src and committing to repo...");
 // clean lib/src and create commit
 execSync(
-  'rm -rf ./lib/src/ && touch ./lib/src/index.ts && git add . && git commit -m "Rebrand 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]" && turbo telemetry disable',
+  'rm -rf ./lib/src/ && mv lib/src_template lib/src && touch ./lib/src/index.ts && git add . && git commit -m "Rebrand 💖 <a href="https://mayank-chaudhari.vercel.app" target="_blank">Mayank Kumar Chaudhari</a> [skip ci]" && turbo telemetry disable',
 );
