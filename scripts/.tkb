@@ -21,11 +21,6 @@
       "description": "Install dependencies using `pnpm`: run `pnpm i`.",
       "columnId": "column-todo"
     },
-    "jdZxwLymOo7w2eZeNpvsN": {
-      "id": "jdZxwLymOo7w2eZeNpvsN",
-      "description": "Run `yarn plop`, and follow prompts to generate server or client components for your library",
-      "columnId": "column-todo"
-    },
     "RX4J5v4y5IOe_ucf8pMRT": {
       "id": "RX4J5v4y5IOe_ucf8pMRT",
       "description": "🌟 Enable [private vulnerability reporting] (For public repo - do this after updating visibility to public)",
@@ -116,7 +111,6 @@
         "Y5__aEZl3Pbxp7r90HKpV",
         "jcpymbi71e702p7n6fwvZ",
         "gbzyhx0FwFfzRoE-iqVeu",
-        "jdZxwLymOo7w2eZeNpvsN",
         "RX4J5v4y5IOe_ucf8pMRT",
         "EdPbrbJLllUHfZmCS80f7",
         "MLLUsAhCKaKxvEXFY0HSq",
