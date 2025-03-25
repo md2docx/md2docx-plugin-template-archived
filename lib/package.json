@@ -33,6 +33,7 @@
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-v8": "^3.0.9",
+    "docx": "^9.3.0",
     "esbuild-plugin-rdi": "^0.0.0",
     "jsdom": "^26.0.0",
     "tsup": "^8.4.0",
@@ -42,6 +43,9 @@
   },
   "dependencies": {
     "@m2d/core": "^0.0.2"
+  },
+  "peerDependencies": {
+    "docx": "^9.3.0"
   },
   "funding": [
     {
